@@ -2,7 +2,9 @@
 """
     Create class Square
 """
-class Square:
+
+
+class Square():
     """
     Create a square class
     """
