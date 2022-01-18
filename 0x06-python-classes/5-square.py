@@ -33,7 +33,5 @@ class Square:
     def my_print(self):
         for i in range(self.__size):
             for j in range(self.__size):
-                print("#", end="")
-            print("")
-        else:
+                print("#", end=' ')
             print("")
