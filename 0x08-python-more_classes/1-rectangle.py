@@ -1,22 +1,19 @@
 #!/usr/bin/python3
-"""module doc"""
+"""Real definition of a rectangle"""
 
 
 class Rectangle:
-    """class doc"""
+    """Real definition of a rectangle"""
     def __init__(self, width=0, height=0):
-        """init doc"""
         self.height = height
         self.width = width
 
     @property
     def width(self):
-        """width getter doc"""
         return self.__width
 
     @property
     def height(self):
-        """height getter doc"""
         return self.__height
 
     @width.setter
