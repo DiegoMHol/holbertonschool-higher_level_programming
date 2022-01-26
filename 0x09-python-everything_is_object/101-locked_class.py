@@ -3,4 +3,5 @@
 
 
 class LockedClass:
+    """test mesage"""
     __slots__ = ["first_name"]
