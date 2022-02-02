@@ -10,7 +10,7 @@ try:
     my_load = load_from_json_file('add_item.json')
     for i in my_load:
         my_list.append(i)
-Exception:
+except:
     my_list = []
 for j in range(1, len(argv)):
     my_list.append(argv[j])
