@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ Python Proyect """
+
+
 class Student:
     """ Create a strudent class """
     def __init__(self, first_name, last_name, age):
