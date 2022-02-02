@@ -1,6 +1,6 @@
 #!/usr/bin/python3
+""" Add arg save """
 from sys import argv
-""" Add arvg """
 
 
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
