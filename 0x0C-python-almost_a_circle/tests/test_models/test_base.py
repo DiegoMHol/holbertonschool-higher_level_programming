@@ -4,7 +4,6 @@ import unittest
 from models.base import Base
 
 
-
 class Test_Base_Model(unittest.TestCase):
     """ test class case models """
 
@@ -19,7 +18,7 @@ class Test_Base_Model(unittest.TestCase):
         """ Negative base """
         b = Base(-20)
         self.assertEqual(b.id, -20)
-    
+
     def test_id_manage(self):
         """ Manage Id to avoid duplicate """
         b = Base()
