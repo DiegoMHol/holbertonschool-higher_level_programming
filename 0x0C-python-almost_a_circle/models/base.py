@@ -9,6 +9,7 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """ Comments test or checkcer """
         if id is not None:
             self.id = id
         else:
@@ -16,12 +17,14 @@ class Base:
             self.id = self.__nb_objects
 
     def integer_validator(self, name, value):
+        """ Comments test or checkcer """
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be > 0".format(name))
 
     def coordinate_validator(self, name, value):
+        """ Comments test or checkcer """
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
         if value < 0:
@@ -29,12 +32,14 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """ Comments test or checkcer """
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return ("[]")
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """ Comments test or checkcer """
         filename = "{}.json".format(cls.__name__)
         with open(filename, 'w', encoding='utf-8') as f:
             listjson = []

@@ -10,20 +10,24 @@ class Square(Rectangle):
         self.size = size
 
     def __str__(self):
+        """ Comments test or checkcer """
         return ("[Square] ({}) {}/{} - {}"
                 .format(self.id, self.x, self.y,
                         self.size))
 
     @property
     def size(self):
+        """ Comments test or checkcer """
         return self.width
 
     @size.setter
     def size(self, value):
+        """ Comments test or checkcer """
         self.integer_validator("width", value)
         self.width = value
 
     def update(self, *args, **kwargs):
+        """ Comments test or checkcer """
         if args and len(args) > 0:
             self.id = args[0]
             if len(args) > 1:
@@ -44,5 +48,6 @@ class Square(Rectangle):
                     setattr(self, key, value)
 
     def to_dictionary(self):
+        """ Comments test or checkcer """
         return {'id': self.id, 'x': self.x,
                 'size': self.size, 'y': self.y}

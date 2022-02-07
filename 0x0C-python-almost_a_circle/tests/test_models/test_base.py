@@ -46,10 +46,12 @@ class Test_Base_Model(unittest.TestCase):
             b = Base(1, 2)
 
     def test_tuples(self):
+        """ Comments test for checker """
         b = Base((1, 3))
         self.assertEqual(b.id, (1, 3))
 
     def test_lists(self):
+        """ Comments test or checkcer """
         b = Base([3])
         self.assertEqual(b.id, [3])
         b = Base([2, 3, 4, "Test String"])
@@ -58,10 +60,12 @@ class Test_Base_Model(unittest.TestCase):
         self.assertEqual(b.id, [])
 
     def test_string_id(self):
+        """ Comments test or checkcer """
         b = Base("String Test")
         self.assertEqual(b.id, "String Test")
 
     def test_true_false_as_id(self):
+        """ Comments test or checkcer """
         b = Base(True)
         self.assertEqual(b.id, True)
         b = Base(False)
