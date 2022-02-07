@@ -49,3 +49,11 @@ class Base:
                 f.write(cls.to_json_string(listjson))
             else:
                 f.write(cls.to_json_string(listjson))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ Comments test or checker """
+        if json_string is None or len(json_string) == 0:
+            return []
+        else:
+            return json.loads(json_string)
