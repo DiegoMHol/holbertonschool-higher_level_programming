@@ -15,6 +15,7 @@ class Test_Rectangle(unittest.TestCase):
         cls.r2 = Rectangle(5, 9)
         cls.r3 = Rectangle(5, 3, 6, 7, 9)
         cls.r4 = Rectangle(4, 5, 7, 4, 10)
+
     def test_width(self):
         """ Comments """
         self.assertEqual(self.r1.width, 3)
@@ -52,12 +53,12 @@ class Test_Rectangle(unittest.TestCase):
         """ Comments """
         with self.assertRaises(TypeError):
             r = Rectangle(3)
-    
+
     def test_width_no_int(self):
         """ Comments """
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
             r = Rectangle("Hi", 4)
-        
+
     def test_height_no_int(self):
         """ Comments """
         with self.assertRaisesRegex(TypeError, "height must be an integer"):
@@ -67,7 +68,7 @@ class Test_Rectangle(unittest.TestCase):
         """ Comments """
         with self.assertRaisesRegex(TypeError, "x must be an integer"):
             r = Rectangle(6, 4, "Holberton")
-    
+
     def test_y_no_int(self):
         """ Comments """
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
@@ -101,6 +102,7 @@ class Test_Rectangle(unittest.TestCase):
         """ Comments """
         with self.assertRaises(TypeError):
             r = self.r1.area(100)
+
     def test___str__(self):
         """ Comments """
         r1 = Rectangle(4, 6, 2, 1, 12)
