@@ -86,3 +86,6 @@ class Test_Rectangle(unittest.TestCase):
     def test_area_too_many_args(self):
         with self.assertRaises(TypeError):
             r = self.r1.area(100)
+    def test___str__(self):
+        r1 = Rectangle(4, 6, 2, 1, 12)
+        self.assertEqual(str(r1), "[Rectangle] (12) 2/1 - 4/6")
