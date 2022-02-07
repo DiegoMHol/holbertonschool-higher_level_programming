@@ -18,44 +18,54 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """ Comments """
         return self.__width
 
     @width.setter
     def width(self, value):
+        """ Comments """
         self.integer_validator("width", value)
         self.__width = value
 
     @property
     def height(self):
+        """ Comments """
         return self.__height
 
     @height.setter
     def height(self, value):
+        """ Comments """
         self.integer_validator("height", value)
         self.__height = value
 
     @property
     def x(self):
+        """ Comments """
         return self.__x
 
     @x.setter
     def x(self, value):
+        """ Comments """
         self.coordinate_validator("x", value)
         self.__x = value
 
     @property
     def y(self):
+        """ Comments """
         return self.__y
 
     @y.setter
     def y(self, value):
+        """ Comments """
         self.coordinate_validator("y", value)
         self.__y = value
 
     def area(self):
+        """ Comments """
         return self.__width * self.__height
 
     def display(self):
+        """ Comments """
         for i in range(self.__y):
             print("")
         for j in range(self.__height):
@@ -66,11 +76,13 @@ class Rectangle(Base):
             print("")
 
     def __str__(self):
+        """ Comments """
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
                                                         self.__y, self.__width,
                                                         self.__height))
 
     def update(self, *args, **kwargs):
+        """ Comments """
         if args and len(args) > 0:
             self.id = args[0]
             if len(args) > 1:
@@ -99,5 +111,6 @@ class Rectangle(Base):
                     setattr(self, key, value)
 
     def to_dictionary(self):
+        """ Comments """
         return {'x': self.__x, 'y': self.__y,
                 'id': self.id, 'height': self.__height, 'width': self.__width}
