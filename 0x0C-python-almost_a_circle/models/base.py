@@ -67,3 +67,16 @@ class Base:
             dummy = cls(5, 5)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """ Comments test for checker """
+        filename = "{}.json".format(cls.__name__)
+        listjson = []
+        try:
+            with open(filename) as f:
+                for objs in cls.from_json_string(f.read()):
+                    listjson.append(cls.create(**objs))
+                return listjson
+        except:
+            return listjson
