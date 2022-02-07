@@ -43,4 +43,4 @@ class Base:
                     listjson.append(cls.to_dictionary(i))
                 f.write(cls.to_json_string(listjson))
             else:
-                f.write(cls.to_json_string(listjson)) 
+                f.write(cls.to_json_string(listjson))
