@@ -57,3 +57,13 @@ class Base:
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ Comments test or checker """
+        if cls.__name__ == "Square":
+            dummy = cls(5)
+        elif cls.__name__ == "Rectangle":
+            dummy = cls(5, 5)
+        dummy.update(**dictionary)
+        return dummy
