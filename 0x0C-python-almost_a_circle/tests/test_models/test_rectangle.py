@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Python test file """
 import unittest
+import json
 from models.base import Base
 from models.rectangle import Rectangle
 
@@ -60,3 +61,28 @@ class Test_Rectangle(unittest.TestCase):
     def test_y_no_int(self):
         with self.assertRaisesRegex(TypeError, "y must be an integer"):
             r = Rectangle(3, 5, 3, "School")
+
+    def test_height_valueerror(self):
+        """Test ints <= 0 for height"""
+        with self.assertRaisesRegex(ValueError, "height must be > 0"):
+            r = Rectangle(1, -1)
+        with self.assertRaisesRegex(ValueError, "height must be > 0"):
+            r = Rectangle(1, 0)
+
+    def test_x_valueerror(self):
+        with self.assertRaisesRegex(ValueError, "x must be >= 0"):
+            r = Rectangle(1, 1, -1)
+
+    def test_y_valueerror(self):
+        with self.assertRaisesRegex(ValueError, "y must be >= 0"):
+            r = Rectangle(1, 1, 1, -1)
+
+    def test_area(self):
+        self.assertEqual(self.r1.area(), 18)
+        self.assertEqual(self.r2.area(), 45)
+        self.assertEqual(self.r3.area(), 15)
+        self.assertEqual(self.r4.area(), 20)
+
+    def test_area_too_many_args(self):
+        with self.assertRaises(TypeError):
+            r = self.r1.area(100)
