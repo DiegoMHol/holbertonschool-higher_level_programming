@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const number = ' My number: ';
+const number = 'My number: ';
 const args = process.argv;
 const parsei = parseInt(args[2], 10);
 if (isNaN(parsei)) {
