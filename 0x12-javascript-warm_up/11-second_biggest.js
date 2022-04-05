@@ -7,6 +7,6 @@ if (args.length <= 3) {
   for (let i = 2; i < args.length; i++) {
     array[i] = parseInt(args[i]);
   }
-	array.sort((a, b) => b - a);
-	console.log(array[1]);
+  array.sort((a, b) => b - a);
+  console.log(array[1]);
 }
