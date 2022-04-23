@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-""" FIND PEAK OF LIST OF INT """
+""" FIND PEAK """
+
 
 def find_peak(list_of_integers):
     """ FIND PEAK """
-    lenList = len(list_of_integers)
-    if lenList < 3:
+
+    sort_list = []
+    if len(list_of_integers) == 0:
         return None
-    peak = list_of_integers[1]
-    for i in range(1, lenList):
-        if list_of_integers[i] >= peak:
-            peak = list_of_integers[i]
-    return peak
+    else:
+        sort_list = sorted(list_of_integers)
+
+        return (sort_list[len(sort_list) - 1])
