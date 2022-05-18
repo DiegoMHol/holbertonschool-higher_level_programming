@@ -9,7 +9,7 @@ request(argv[2], (err, res, body) => {
     console.log(err);
   }
   fs.writeFile(argv[3], body, 'utf-8', (err, data) => {
-    if (err){
+    if (err) {
       console.log(err);
     }
   });
